@@ -45,11 +45,9 @@
 			<div class="lease clearfloat">
 				<div class="top clearfloat box-s">
 					<i class="iconfont icon-gonggao fl"></i>
-					<span class="fl box-s">大闸蟹属于季节商品，价格浮动大，想了解最新价格请联系我！</span>
+					<span class="fl box-s">大闸蟹属于季节商品，想了解最新价格请联系我！</span>
 				</div>
-				<div class="land-ctent land-ctenttwo clearfloat">
-							
-				</div>
+				<img src="price.jpg" width="100%"/>
 			</div>
 		</div>
 		
@@ -82,28 +80,6 @@
 			</ul>
 			</ul>
 		</footer>
-		
-		<!--弹窗内容 star-->
-	    <div id="loginmodal" class="box-s loginmodaltwo" style="display:none;">	    	
-			<form id="loginform" name="loginform" method="post" action="">		
-				<div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blutwo hidemodal" value="" tabindex="3"></div>
-			</form>
-			<div class="bottom clearfloat box-s">
-				<div class="login-dui clearfloat">
-					<p class="tu">
-						<img src="img/dui.png"/>
-					</p>
-					<p class="tit">
-						恭喜您，委托成功！
-					</p>
-					<p class="fu-tit">
-						请保持所填号码手机的通话畅通状态，我们的客服将会在48小时内与您取得联系。
-					</p>
-				</div>
-				<input type="button" name="" id="" value="好的，我知道了" class="btn btn1" />
-			</div>
-		</div>
-	    <!--弹窗内容 end-->
 	</body>
 	<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 	<script type="text/javascript" src="slick/slick.min.js" ></script>
@@ -114,59 +90,4 @@
 	<script src="js/mui.picker.min.js"></script>
 	<script src="js/city.data.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
-	<script>
-		(function($) {
-			$.init();
-			var result = $('#result')[0];
-			var btns = $('.btnfour');
-			btns.each(function(i, btn) {
-				btn.addEventListener('tap', function() {
-					var optionsJson = this.getAttribute('data-options') || '{}';
-					var options = JSON.parse(optionsJson);
-					var id = this.getAttribute('id');
-					var picker = new $.DtPicker(options);
-					picker.show(function(rs) {
-					    alert('选择结果: ' + rs.text);
-						picker.dispose();
-					});
-				}, false);
-			});
-		})(mui);
-	</script>
-	<script>
-		(function($, doc) {
-			$.init();
-			$.ready(function() {
-				var userPicker = new $.PopPicker();
-				userPicker.setData([{
-					value: '',
-					text: '整租'
-				}, {
-					value: '',
-					text: '合租'
-				}, {
-					value: '',
-					text: '短租/日租公寓'
-				}, {
-					value: '',
-					text: '厂房/仓库/土地/车位'
-				}, {
-					value: '',
-					text: '写字楼租售'
-				}, {
-					value: '',
-					text: '商铺出租'
-				}]);
-				var showUserPickerButton = doc.getElementById('showUserPicker');
-				var userResult = doc.getElementById('userResult');
-				showUserPickerButton.addEventListener('tap', function(event) {
-					userPicker.show(function(items) {
-					    alert(JSON.stringify(items[0]));
-					});
-				}, false);
-			
-			
-			});
-		})(mui, document);
-	</script>
 </html>
