@@ -28,8 +28,12 @@
 			var profit08 = (sell * 0.8  - cost) / cost * 100;
 			var profit75 = (sell * 0.75 - cost) / cost * 100;
 			var profit07 = (sell * 0.7  - cost) / cost * 100;
+			var profit65 = (sell * 0.65 - cost) / cost * 100;
+			var profit06 = (sell * 0.6  - cost) / cost * 100;
 			var profit05 = (sell * 0.5  - cost) / cost * 100;
+			var profit04 = (sell * 0.4  - cost) / cost * 100;
 			var profit03 = (sell * 0.3  - cost) / cost * 100;
+			var profit02 = (sell * 0.2  - cost) / cost * 100;
 			var profit01 = (sell * 0.1  - cost) / cost * 100;
 
 			$('#price10').html(formatCurrencyTenThou(profit10));
@@ -39,8 +43,12 @@
 			$('#price08').html(formatCurrencyTenThou(profit08));
 			$('#price75').html(formatCurrencyTenThou(profit75));
 			$('#price07').html(formatCurrencyTenThou(profit07));
+			$('#price65').html(formatCurrencyTenThou(profit65));
+			$('#price06').html(formatCurrencyTenThou(profit06));
 			$('#price05').html(formatCurrencyTenThou(profit05));
+			$('#price04').html(formatCurrencyTenThou(profit04));
 			$('#price03').html(formatCurrencyTenThou(profit03));
+			$('#price02').html(formatCurrencyTenThou(profit02));
 			$('#price01').html(formatCurrencyTenThou(profit01));
 			
 		});
@@ -65,29 +73,35 @@
 				
 		    	<div class="content clearfloat box-s">
 					<h3 style="float:left;">成本：</h3>
-		    		<input id="cost" type="text" style="width:300px;height:20px;float:left;" placeholder="请输入成本：如10.5" value="" />
+		    		<input id="cost" type="text" style="width:250px;height:20px;float:left;" placeholder="请输入成本：如10.5" value="" />
 		    	</div>
 				<div class="content clearfloat box-s">
 					<h3 style="float:left;">售价：</h3>
-		    		<input id="sell" type="text" style="width:300px;height:20px;float:left;" placeholder="请输入售价：如29.98" value="" />
+		    		<input id="sell" type="text" style="width:250px;height:20px;float:left;" placeholder="请输入售价：如29.98" value="" />
 		    	</div>
 				<center><button id="count" type="button">计算利润</button></center>
 				
 		    	<hr/>
 				
-				<p style="float:left;">原价：</p><p id='price10' style="float:left;"></p><p style="float:left;">%</p><p style="float:left;">&nbsp;&nbsp;&nbsp;95折：</p><p id='price95' style="float:left;"></p><p style="float:left;">%</p>
+				<p style="float:left;">原价：</p><p id='price10' style="float:left;"></p><p style="float:left;">%</p><p style="float:left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;95折：</p><p id='price95' style="float:left;"></p><p style="float:left;">%</p>
 				<br/>
 				<br/>
-				<p style="float:left;"> 9折：</p><p id='price09' style="float:left;"></p><p style="float:left;">%</p><p style="float:left;">&nbsp;&nbsp;&nbsp;85折：</p><p id='price85' style="float:left;"></p><p style="float:left;">%</p>
+				<p style="float:left;"> 9折：</p><p id='price09' style="float:left;"></p><p style="float:left;">%</p><p style="float:left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;85折：</p><p id='price85' style="float:left;"></p><p style="float:left;">%</p>
 				<br/>
 				<br/>
-				<p style="float:left;"> 8折：</p><p id='price08' style="float:left;"></p><p style="float:left;">%</p><p style="float:left;">&nbsp;&nbsp;&nbsp;75折：</p><p id='price75' style="float:left;"></p><p style="float:left;">%</p>
+				<p style="float:left;"> 8折：</p><p id='price08' style="float:left;"></p><p style="float:left;">%</p><p style="float:left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;75折：</p><p id='price75' style="float:left;"></p><p style="float:left;">%</p>
 				<br/>
 				<br/>
-				<p style="float:left;"> 7折：</p><p id='price07' style="float:left;"></p><p style="float:left;">%</p><p style="float:left;">&nbsp;&nbsp;&nbsp; 5折：</p><p id='price05' style="float:left;"></p><p style="float:left;">%</p>
+				<p style="float:left;"> 7折：</p><p id='price07' style="float:left;"></p><p style="float:left;">%</p><p style="float:left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;65折：</p><p id='price65' style="float:left;"></p><p style="float:left;">%</p>
 				<br/>
 				<br/>
-				<p style="float:left;"> 3折：</p><p id='price03' style="float:left;"></p><p style="float:left;">%</p><p style="float:left;">&nbsp;&nbsp;&nbsp; 1折：</p><p id='price01' style="float:left;"></p><p style="float:left;">%</p>
+				<p style="float:left;"> 6折：</p><p id='price06' style="float:left;"></p><p style="float:left;">%</p><p style="float:left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5折：</p><p id='price05' style="float:left;"></p><p style="float:left;">%</p>
+				<br/>
+				<br/>
+				<p style="float:left;"> 4折：</p><p id='price04' style="float:left;"></p><p style="float:left;">%</p><p style="float:left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3折：</p><p id='price03' style="float:left;"></p><p style="float:left;">%</p>
+				<br/>
+				<br/>
+				<p style="float:left;"> 2折：</p><p id='price02' style="float:left;"></p><p style="float:left;">%</p><p style="float:left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1折：</p><p id='price01' style="float:left;"></p><p style="float:left;">%</p>
 			
 		    </div>
 	   </div>
