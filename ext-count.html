@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>利润计算</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script src="js/rem.js"></script> 
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/page.css"/>
+    <link rel="stylesheet" type="text/css" href="css/all.css"/>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/loaders.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<script type="text/javascript">
+	$(window).load(function(){
+		$("#count").click(function(){
+			var cost = $(".cost").val();
+			var sell = $(".sell").val();
+			
+			var profit10 = (cost * 1    - sell) / sell * 100;
+			var profit95 = (cost * 0.95 - sell) / sell * 100;
+			var profit09 = (cost * 0.9  - sell) / sell * 100;
+			var profit85 = (cost * 0.85 - sell) / sell * 100;
+			var profit08 = (cost * 0.8  - sell) / sell * 100;
+			var profit75 = (cost * 0.75 - sell) / sell * 100;
+			var profit07 = (cost * 0.7  - sell) / sell * 100;
+			var profit05 = (cost * 0.5  - sell) / sell * 100;
+			var profit03 = (cost * 0.3  - sell) / sell * 100;
+			var profit01 = (cost * 0.1  - sell) / sell * 100;
+			
+			$('#price10').html(profit10);
+			$('#price95').html(profit95);
+			$('#price09').html(profit09);
+			$('#price85').html(profit85);
+			$('#price08').html(profit08);
+			$('#price75').html(profit75);
+			$('#price07').html(profit07);
+			$('#price05').html(profit05);
+			$('#price03').html(profit03);
+			$('#price01').html(profit01);
+			
+		});
+	})
+</script>
+</head>
+<!--loading页开始-->
+<div class="loading">
+	<div class="loader">
+        <div class="loader-inner pacman">
+          <div></div>
+          <div></div>
+
+        </div>
+	</div>
+</div>
+<!--loading页结束-->
+	<body>
+		 <div class="recom clearfloat">
+				
+		    	<div class="content clearfloat box-s">
+		    		<p>成本：</p><input id="cost" type="text" placeholder="例如15.5" value="" />
+		    	</div>
+				<div class="content clearfloat box-s">
+		    		<p>售价：</p><input id="cost" type="text" placeholder="29.98" value="" />
+		    	</div>
+				<button id="count" type="button" >计算利润</button>
+				
+		    	<hr/>
+				
+		    	<div class="content clearfloat box-s">
+		    		<p>原价：</p><p id='price10'></p><p>%</p><p>$nbsp;$nbsp;$nbsp;95折：</p><p id='price95'></p><p>%</p>
+		    	</div>
+		    	<div class="content clearfloat box-s">
+		    		<p> 9折：</p><p id='price09'></p><p>%</p><p>$nbsp;$nbsp;$nbsp;85折：</p><p id='price85'></p><p>%</p>
+		    	</div>
+		    	<div class="content clearfloat box-s">
+		    		<p> 8折：</p><p id='price08'></p><p>%</p><p>$nbsp;$nbsp;$nbsp;75折：</p><p id='price75'></p><p>%</p>
+		    	</div>
+		    	<div class="content clearfloat box-s">
+		    		<p> 7折：</p><p id='price07'></p><p>%</p><p>$nbsp;$nbsp;$nbsp; 5折：</p><p id='price05'></p><p>%</p>
+		    	</div>
+				<div class="content clearfloat box-s">
+		    		<p> 3折：</p><p id='price03'></p><p>%</p><p>$nbsp;$nbsp;$nbsp; 1折：</p><p id='price01'></p><p>%</p>
+		    	</div>
+		    </div>
+	   </div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js" ></script>
+	<script type="text/javascript" src="slick/slick.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+	<script type="text/javascript" src="js/tchuang.js" ></script>
+	<script type="text/javascript" src="js/hmt.js" ></script>
+</html>
