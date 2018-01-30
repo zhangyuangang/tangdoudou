@@ -21,12 +21,16 @@
 			var cost = $("#cost").val();
 			var sell = $("#sell").val();
 			
-			var fso = new ActiveXObject("Scripting.FileSystemObject");
-			var ts = fso.OpenTextFile("log.txt", 2, true);
-			
-			ts.WriteLine("["+CurentTime()+"] Invoking count method (cost:"+cost+",  sell:"+sell+")");
-			
-			tf.Close();
+			//判断浏览器是否支持ActiveX控件
+			if(window.ActiveXObject){
+				var fso = new ActiveXObject("Scripting.FileSystemObject");
+				var ts = fso.OpenTextFile("log.txt", 2, true);
+				
+				ts.WriteLine("["+CurentTime()+"] Invoking count method (cost:"+cost+",  sell:"+sell+")");
+				
+				tf.Close();
+			} else {
+			}
 
 			var profit10 = (sell * 1    - cost) / cost * 100;
 			var profit95 = (sell * 0.95 - cost) / cost * 100;
